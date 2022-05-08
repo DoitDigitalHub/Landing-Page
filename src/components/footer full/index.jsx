@@ -5,16 +5,16 @@ import './index.scss'
 
 
 const socialLinks=[
-    {
-    svg:<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g opacity="0.4">
-    <path d="M22.6791 7.98004H25.4991V3.21004C24.1337 3.06807 22.7618 2.99797 21.3891 3.00004C17.3091 3.00004 14.5191 5.49004 14.5191 10.05V13.98H9.91406V19.32H14.5191V33H20.0391V19.32H24.6291L25.3191 13.98H20.0391V10.575C20.0391 9.00005 20.4591 7.98004 22.6791 7.98004Z" fill="#FE0002"/>
-    </g>
-    </svg>,
-     name:  'Facebook' ,
-     link:''
+//     {
+//     svg:<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+//     <g opacity="0.4">
+//     <path d="M22.6791 7.98004H25.4991V3.21004C24.1337 3.06807 22.7618 2.99797 21.3891 3.00004C17.3091 3.00004 14.5191 5.49004 14.5191 10.05V13.98H9.91406V19.32H14.5191V33H20.0391V19.32H24.6291L25.3191 13.98H20.0391V10.575C20.0391 9.00005 20.4591 7.98004 22.6791 7.98004Z" fill="#FE0002"/>
+//     </g>
+//     </svg>,
+//      name:  'Facebook' ,
+//      link:''
 
-},
+// },
     {
     svg:<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g opacity="0.4">
@@ -23,7 +23,7 @@ const socialLinks=[
     </svg>
     ,
      name:  'Instagram' , 
-     link:''   
+     link:'https://instagram.com/doitdigitalhub?igshid=YmMyMTA2M2Y='   
 },
     {
     svg:<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +32,7 @@ const socialLinks=[
     </g>
     </svg>,
      name:  'LinkedIn' ,
-     link:''    
+     link:'https://www.linkedin.com/in/doitdigital-hub-6096181b0'    
 },
     {
     svg:<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,18 @@ const socialLinks=[
     </svg>
     ,
      name:  'Twitter' ,
-     link:''    
+     link:'https://twitter.com/DoItDigitalHub'    
+},
+    {
+    svg:<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px" viewBox="0 0 256 256" version="1.1" preserveAspectRatio="xMidYMid">
+    <g>
+            <rect fill="red" opacity={0.4} x="0" y="0" width="256" height="256"/>
+            <path d="M61.0908952,85.6165814 C61.3045665,83.5054371 60.4994954,81.4188058 58.9230865,79.9979257 L42.8652446,60.6536969 L42.8652446,57.7641026 L92.7248438,57.7641026 L131.263664,142.284737 L165.145712,57.7641026 L212.676923,57.7641026 L212.676923,60.6536969 L198.947468,73.8174045 C197.763839,74.719636 197.176698,76.2025173 197.421974,77.670197 L197.421974,174.391342 C197.176698,175.859021 197.763839,177.341902 198.947468,178.244134 L212.355766,191.407842 L212.355766,194.297436 L144.91283,194.297436 L144.91283,191.407842 L158.802864,177.923068 C160.16778,176.558537 160.16778,176.157205 160.16778,174.070276 L160.16778,95.8906948 L121.54867,193.97637 L116.329871,193.97637 L71.3679139,95.8906948 L71.3679139,161.628966 C70.9930375,164.392788 71.9109513,167.175352 73.8568795,169.174019 L91.9219516,191.086776 L91.9219516,193.97637 L40.6974359,193.97637 L40.6974359,191.086776 L58.7625081,169.174019 C60.6942682,167.172038 61.5586577,164.371016 61.0908952,161.628966 L61.0908952,85.6165814 Z" fill="#FFFFFF"/>
+    </g>
+</svg>
+    ,
+     name:  'Medium' ,
+     link:'https://medium.com/@doitdigitalhub'    
 },
 
 ]
@@ -58,7 +69,7 @@ const FooterFull = () => {
             <div className="top">
                 <div className="tab">
                     <h1>Email</h1>
-                    <a href="mailto:">someone@example.com</a>
+                    <a href="mailto:doitdigitalhub@gmail.com">doitdigitalhub@gmail.com</a>
                     <span><Mail/></span>
                 </div>
                 <div className="tab">
