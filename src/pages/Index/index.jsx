@@ -73,7 +73,7 @@ const Index = () => {
         <div className="cta_take">
           <a href="">Take me there</a>
         </div>
-        <div className="products">
+        <div id="services" className="products">
           {products.map((product, idx) => {
             return (
               <div key={idx} className="product">
