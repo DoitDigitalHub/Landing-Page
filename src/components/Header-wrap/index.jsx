@@ -1,4 +1,4 @@
-import { Children, useState } from "react";
+import { useState } from "react";
 import OpenNav from "../../assets/svg/openNav";
 import "./index.scss";
 import logo from "../../assets/png/red and black logo 1.png";
@@ -20,8 +20,7 @@ const HeaderWrap = ({ children }) => {
               onClick={() => {
                 console.log("clicked");
                 window.location.href = "/";
-              }}
-            >
+              }}>
               <img src={logo} alt="" />
             </div>
             <div onClick={() => setOpen(!open)} className="navControl">
@@ -36,20 +35,17 @@ const HeaderWrap = ({ children }) => {
                 </a>
                 <a
                   href="#services"
-                  className={location.includes("services") && "active"}
-                >
+                  className={location.includes("services") && "active"}>
                   SERVICES
                 </a>
                 <a
                   href="/team"
-                  className={location.pathname === "/team" && "active"}
-                >
+                  className={location.pathname === "/team" && "active"}>
                   TEAM
                 </a>
                 <a
                   href="/contact"
-                  className={location.pathname === "/contact" && "active"}
-                >
+                  className={location.pathname === "/contact" && "active"}>
                   CONTACT US
                 </a>
               </ul>
