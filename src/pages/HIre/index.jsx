@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import { socialLink } from "../../components/footer full";
+import { socialLink } from "../../components/footer-full";
 
 function Hire(props) {
   return (
@@ -52,16 +52,14 @@ function Hire(props) {
         <div className="button">Send</div>
       </div>
       <div className="socials">
-          {socialLink.map(logo=>(
-              <div>
-                  {logo.svg}
-              </div>
-          ))}
+        {socialLink.map((logo) => (
+          <div>{logo.svg}</div>
+        ))}
       </div>
       <div className="bottom">
-      <span>© DDHub. All rights reserved</span>
-                <a href="">Terms and condition</a>
-                <a href="">Privacy</a>
+        <span>© DDHub. All rights reserved</span>
+        <a href="">Terms and condition</a>
+        <a href="">Privacy</a>
       </div>
     </div>
   );

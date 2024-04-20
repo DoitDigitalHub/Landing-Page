@@ -1,16 +1,16 @@
 import HandsHeld from "../../assets/svg/handsHeld";
 import jumbo from "../../assets/png/jumbo.png";
 import desktopJumbo from "../../assets/png/desktopJumbo.png";
-import Cuate from "../../assets/png/cuate.png"
+import Cuate from "../../assets/png/cuate.png";
 import Plug from "../../assets/svg/plug";
 import Questions from "../../assets/svg/questions";
-import HireButton from "../../components/hire button";
+import HireButton from "../../components/hire-button";
 import otherProducts from "../../utils/otherProducts";
 import products from "../../utils/products";
-import Mask from '../../assets/png/mask.png'
-import Bro from '../../assets/png/bro.png'
+import Mask from "../../assets/png/mask.png";
+import Bro from "../../assets/png/bro.png";
 import "./index.scss";
-import FooterFull from "../../components/footer full";
+import FooterFull from "../../components/footer-full";
 
 const Index = () => {
   return (
@@ -49,13 +49,13 @@ const Index = () => {
             </p>
           </div>
           <div className="right">
-              <img  src={Mask} alt/>
+            <img src={Mask} alt />
           </div>
         </div>
         <div className="choose">
-            <div className="img">
-                <img src={Bro} alt />
-            </div>
+          <div className="img">
+            <img src={Bro} alt />
+          </div>
           <Questions />
           <div className="questionDiv">
             <h3>Why Choose Us?</h3>
@@ -66,8 +66,8 @@ const Index = () => {
             </p>
           </div>
           <div className="img">
-                <img src={Bro} alt />
-            </div>
+            <img src={Bro} alt />
+          </div>
           <Questions />
         </div>
         <div className="cta_take">
@@ -81,22 +81,22 @@ const Index = () => {
                   <img src={product.image} alt="" />
                 </div>
                 <div className="content">
-                <p
-                  className="tag"
-                  style={{
-                    color:
-                      (idx === 0 && "#107596") ||
-                      (idx === 1 && "#DAA142") ||
-                      (idx === 2 && "#27AE60"),
-                  }}
-                >
-                  {product.tag}
-                </p>
-                <h3>{product.title}</h3>
-                <p className="body">{product.body}</p>
-                <a href={product.url} className="action_button">
-                  Learn more
-                </a>
+                  <p
+                    className="tag"
+                    style={{
+                      color:
+                        (idx === 0 && "#107596") ||
+                        (idx === 1 && "#DAA142") ||
+                        (idx === 2 && "#27AE60"),
+                    }}
+                  >
+                    {product.tag}
+                  </p>
+                  <h3>{product.title}</h3>
+                  <p className="body">{product.body}</p>
+                  <a href={product.url} className="action_button">
+                    Learn more
+                  </a>
                 </div>
               </div>
             );
@@ -124,12 +124,10 @@ const Index = () => {
       <div className="work">
         <HandsHeld />
         <div className="img_overlay">
-            <div className="over_lay">
-                 Work with us
-            </div>
-            <div className="img">
-                <img src={Cuate} alt="" />
-            </div>
+          <div className="over_lay">Work with us</div>
+          <div className="img">
+            <img src={Cuate} alt="" />
+          </div>
         </div>
         <p>Work with us</p>
       </div>
@@ -147,8 +145,7 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <FooterFull/>
-
+      <FooterFull />
     </div>
   );
 };
