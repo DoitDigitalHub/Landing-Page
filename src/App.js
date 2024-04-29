@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HeaderWrap from "./components/Header-wrap";
 import Index from "./pages/Index";
-import FooterFull from "./components/footer-full";
+// import FooterFull from "./components/footer-full";
 import Hire from "./pages/HIre";
 import Contact from "./pages/Contact";
 

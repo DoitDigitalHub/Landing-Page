@@ -58,8 +58,8 @@ function Hire(props) {
       </div>
       <div className="bottom">
         <span>© DDHub. All rights reserved</span>
-        <a href="">Terms and condition</a>
-        <a href="">Privacy</a>
+        <a href="/">Terms and condition</a>
+        <a href="/">Privacy</a>
       </div>
     </div>
   );

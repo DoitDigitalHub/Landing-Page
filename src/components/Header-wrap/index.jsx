@@ -1,4 +1,4 @@
-import { Children, useState } from "react";
+import { useState } from "react";
 import OpenNav from "../../assets/svg/openNav";
 import "./index.scss";
 import logo from "../../assets/png/red and black logo 1.png";

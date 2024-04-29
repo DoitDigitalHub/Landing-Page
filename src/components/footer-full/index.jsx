@@ -117,8 +117,8 @@ const FooterFull = () => {
           </div>
           <div className="bottom">
             <span>© DDHub. All rights reserved</span>
-            <a href="">Terms and condition</a>
-            <a href="">Privacy</a>
+            <a href="/">Terms and condition</a>
+            <a href="/">Privacy</a>
             <a href="#top" className="toTop">
               Back to Top
             </a>

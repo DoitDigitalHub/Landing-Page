@@ -49,12 +49,12 @@ const Index = () => {
             </p>
           </div>
           <div className="right">
-            <img src={Mask} alt />
+            <img src={Mask} alt="" />
           </div>
         </div>
         <div className="choose">
           <div className="img">
-            <img src={Bro} alt />
+            <img src={Bro} alt="" />
           </div>
           <Questions />
           <div className="questionDiv">
@@ -66,12 +66,12 @@ const Index = () => {
             </p>
           </div>
           <div className="img">
-            <img src={Bro} alt />
+            <img src={Bro} alt="" />
           </div>
           <Questions />
         </div>
         <div className="cta_take">
-          <a href="">Take me there</a>
+          <a href="/">Take me there</a>
         </div>
         <div id="services" className="products">
           {products.map((product, idx) => {
@@ -88,8 +88,7 @@ const Index = () => {
                         (idx === 0 && "#107596") ||
                         (idx === 1 && "#DAA142") ||
                         (idx === 2 && "#27AE60"),
-                    }}
-                  >
+                    }}>
                     {product.tag}
                   </p>
                   <h3>{product.title}</h3>
