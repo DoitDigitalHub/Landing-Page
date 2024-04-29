@@ -124,27 +124,6 @@ const FooterFull = () => {
             </a>
           </div>
         </div>
-        <div className="tab">
-          <h1>Phone</h1>
-          <a href="tel:+">+2349030877649</a>
-          <span>
-            <PhoneIcon />
-          </span>
-        </div>
-      </div>
-      <div className="body">
-        {socialLinks.map((link, idx) => (
-          <SocialLink id={idx} key={idx} data={link} />
-        ))}
-      </div>
-      <div className="bottom">
-        <span>© DDHub. All rights reserved</span>
-        <a href="">Terms and condition</a>
-        <a href="">Privacy</a>
-        <a href="">Community</a>
-        <a href="#top" className="toTop">
-          Back to Top
-        </a>
       </div>
     </div>
   );

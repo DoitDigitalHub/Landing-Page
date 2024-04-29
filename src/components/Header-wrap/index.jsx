@@ -36,7 +36,9 @@ const HeaderWrap = ({ children }) => {
                 </a>
                 <a
                   href="#services"
-                  className={location.includes("services") && "active"}
+                  className={
+                    location.pathname?.includes("services") && "active"
+                  }
                 >
                   SERVICES
                 </a>
