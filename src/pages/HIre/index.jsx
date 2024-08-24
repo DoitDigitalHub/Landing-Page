@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./index.scss";
-import { socialLink } from "../../components/footer-full";
+import FooterFull from "../../components/footer-full";
 
-function Hire(props) {
+const Hire = () => {
+  // state to track data entered by visitor to forward to email
+  const [hireData, setHireData] = useState({
+    rangeOne: "",
+    rangeTwo: "",
+    email: "",
+    service: "",
+  });
+
+  // ref to trigger email sending
+  const mailRef = useRef();
+
   return (
     <div class="hire_page">
       <div className="message">
@@ -14,16 +25,38 @@ function Hire(props) {
         </p>
       </div>
 
-      <div className="form">
+      <form
+        className="form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          mailRef.current.click();
+        }}
+      >
         <div className="entries">
           <div className="entry">
             <p>
               What is your <span>budget</span>
             </p>
             <div className="input">
-              <input type="number" placeholder="$1000" />
+              <input
+                type="number"
+                placeholder="$1000"
+                min={0}
+                onChange={(e) =>
+                  setHireData({ ...hireData, rangeOne: e.target.value })
+                }
+                required
+              />
               <span>-</span>
-              <input type="number" placeholder="$2000" />
+              <input
+                type="number"
+                placeholder="$2000"
+                min={0}
+                onChange={(e) =>
+                  setHireData({ ...hireData, rangeTwo: e.target.value })
+                }
+                required
+              />
             </div>
             <span>Input your budget range</span>
           </div>
@@ -32,7 +65,14 @@ function Hire(props) {
               Your <span>E -mail address</span>
             </p>
             <div className="input">
-              <input type="email" placeholder="exmaple@example.com" />
+              <input
+                type="email"
+                placeholder="exmaple@example.com"
+                onChange={(e) =>
+                  setHireData({ ...hireData, email: e.target.value })
+                }
+                required
+              />
             </div>
             <span>Input your email address so we can contact you</span>
           </div>
@@ -41,28 +81,32 @@ function Hire(props) {
               What <span>service</span> do you require?
             </p>
             <div className="input">
-              <input type="text" placeholder="UI Design" />
+              <input
+                type="text"
+                placeholder="UI Design"
+                onChange={(e) =>
+                  setHireData({ ...hireData, service: e.target.value })
+                }
+                required
+              />
             </div>
             <span>
               UI Design, Web development, consultation, others, etc...
             </span>
           </div>
         </div>
-
-        <div className="button">Send</div>
-      </div>
-      <div className="socials">
-        {socialLink.map((logo) => (
-          <div>{logo.svg}</div>
-        ))}
-      </div>
-      <div className="bottom">
-        <span>© DDHub. All rights reserved</span>
-        <a href="/">Terms and condition</a>
-        <a href="/">Privacy</a>
-      </div>
+        <a
+          href={`mailto:doitdigitalhub@gmail.com? &subject= Offer for ${hireData?.service} from ${hireData?.email} &body= My budget is ${hireData?.rangeOne} - ${hireData?.rangeTwo}`}
+          style={{ display: "none" }}
+          ref={mailRef}
+        >
+          mailer
+        </a>
+        <button className="button">Send</button>
+      </form>
+      <FooterFull hide />
     </div>
   );
-}
+};
 
 export default Hire;

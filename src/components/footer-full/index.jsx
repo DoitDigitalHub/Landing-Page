@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Mail from "../../assets/svg/Mail";
 import PhoneIcon from "../../assets/svg/phoneIcon";
 import "./index.scss";
@@ -87,38 +88,57 @@ const socialLinks = [
   },
 ];
 
-const FooterFull = () => {
+const FooterFull = ({ hide }) => {
+  // ref for triggering click of email when click of surrounding div
+  const emailRef = useRef();
+
+  // ref for triggering click of phone dial when click of surrounding div
+  const phoneRef = useRef();
+
   return (
     <div>
       <div>
         <div className="footerfull">
-          <div className="top">
-            <div className="tab">
-              <h1>Email</h1>
-              <a href="mailto:doitdigitalhub@gmail.com">
-                doitdigitalhub@gmail.com
+          {!hide && (
+            <div className="top">
+              <div className="tab" onClick={() => emailRef.current.click()}>
+                <h1>Email</h1>
+                <a href="mailto:doitdigitalhub@gmail.com" ref={emailRef}>
+                  doitdigitalhub@gmail.com
+                </a>
+                <span>
+                  <Mail />
+                </span>
+              </div>
+              <div className="tab" onClick={() => phoneRef.current.click()}>
+                <h1>Phone</h1>
+                <a href="tel:+2349030877649" ref={phoneRef}>
+                  +2349030877649
+                </a>
+                <span>
+                  <PhoneIcon />
+                </span>
+              </div>
+            </div>
+          )}
+          <div className="socials">
+            {socialLink.map((link, idx) => (
+              <a key={idx} href="/">
+                {link.svg}
               </a>
-              <span>
-                <Mail />
-              </span>
-            </div>
-            <div className="tab">
-              <h1>Phone</h1>
-              <a href="tel:+">+2349030877649</a>
-              <span>
-                <PhoneIcon />
-              </span>
-            </div>
-          </div>
-          <div className="body">
-            {socialLinks.map((link, idx) => (
-              <SocialLink id={idx} key={idx} data={link} />
             ))}
           </div>
           <div className="bottom">
             <span>© DDHub. All rights reserved</span>
             <a href="/">Terms and condition</a>
             <a href="/">Privacy</a>
+            <a
+              href="https://chat.whatsapp.com/JNpu03HedGIASJUQuxp23Y"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Community
+            </a>
             <a href="#top" className="toTop">
               Back to Top
             </a>
@@ -131,14 +151,3 @@ const FooterFull = () => {
 export default FooterFull;
 
 export const socialLink = socialLinks;
-const SocialLink = ({ data, id }) => {
-  return (
-    <div className={`link ${id < 3 && "border"}`}>
-      <span>{data.svg}</span>
-      <h3>{data.name}</h3>
-      <span>@ddhub</span>
-
-      <div className="follow">follow us</div>
-    </div>
-  );
-};

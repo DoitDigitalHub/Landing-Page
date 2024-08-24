@@ -1,6 +1,4 @@
 import HandsHeld from "../../assets/svg/handsHeld";
-import jumbo from "../../assets/png/jumbo.png";
-import desktopJumbo from "../../assets/png/desktopJumbo.png";
 import Cuate from "../../assets/png/cuate.png";
 import Plug from "../../assets/svg/plug";
 import Questions from "../../assets/svg/questions";
@@ -11,17 +9,30 @@ import Mask from "../../assets/png/mask.png";
 import Bro from "../../assets/png/bro.png";
 import "./index.scss";
 import FooterFull from "../../components/footer-full";
+import degrees from "../../assets/png/degrees.png";
+import laptop from "../../assets/png/laptop.png";
+import iphone from "../../assets/png/iphone.png";
 
 const Index = () => {
   return (
     <div className="index">
       <div className="container">
         <div className="jumbo">
-          <img src={jumbo} alt="" />
+          <div className="left">
+            <img src={degrees} alt="degree" />
+            <h3>
+              Remote <br /> Digital
+            </h3>
+            <p>Gateway</p>
+          </div>
+          <div className="right">
+            <img src={iphone} alt="a laptop" />
+          </div>
+          {/* <img src={jumbo} alt="" /> */}
         </div>
         <div className="cta">
           <p>
-            We are a digital creative hub specializing in valuable and
+            We are sa digital creative hub specializing in valuable and
             sustainable brand experiences. Remotely, we have helped clients in
             Nigeria as well as, Internationals to find, build and share their
             purpose with a larger audience, digitally
@@ -35,7 +46,19 @@ const Index = () => {
         <div className="desktop_jumbo">
           <div className="left">
             <div className="img">
-              <img src={desktopJumbo} alt="" />
+              <div className="jumbo_left">
+                <div className="offset_top">
+                  <img src={degrees} alt="degree" />
+                  <h3>Remote Digital</h3>
+                </div>
+                <p>
+                  <span>Gateway</span>
+                </p>
+              </div>
+              <div className="jumbo_right">
+                <img src={laptop} alt="a laptop" />
+              </div>
+              {/* <img src={jumbo} alt="" /> */}
             </div>
             <p>
               We are a digital creative hub specializing in valuable and
@@ -88,7 +111,8 @@ const Index = () => {
                         (idx === 0 && "#107596") ||
                         (idx === 1 && "#DAA142") ||
                         (idx === 2 && "#27AE60"),
-                    }}>
+                    }}
+                  >
                     {product.tag}
                   </p>
                   <h3>{product.title}</h3>
