@@ -3,9 +3,9 @@ import OpenNav from "../../assets/svg/openNav";
 import "./index.scss";
 import logo from "../../assets/png/red and black logo 1.png";
 import CloseNav from "../../assets/svg/closeNav";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import NavDesign from "../../assets/svg/navDesign";
-
+import { HashLink } from "react-router-hash-link";
 const HeaderWrap = ({ children }) => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -31,29 +31,29 @@ const HeaderWrap = ({ children }) => {
           <div className="bottom">
             {open && (
               <ul>
-                <a href="/" className={location.pathname === "/" && "active"}>
+                <Link to="/" className={location.pathname === "/" && "active"}>
                   HOME
-                </a>
-                <a
-                  href="#services"
+                </Link>
+                <HashLink
+                  to="#services"
                   className={
                     location.pathname?.includes("services") && "active"
                   }
                 >
                   SERVICES
-                </a>
-                <a
+                </HashLink>
+                <Link
                   href="/team"
                   className={location.pathname === "/team" && "active"}
                 >
                   TEAM
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/contact"
                   className={location.pathname === "/contact" && "active"}
                 >
                   CONTACT US
-                </a>
+                </Link>
               </ul>
             )}
           </div>
@@ -66,44 +66,43 @@ const HeaderWrap = ({ children }) => {
           <img src={logo} alt="" />
         </div>
         <div className="navLinks">
-          <a href="/">
+          <Link to="/">
             <span>HOME</span>
             {location.pathname === "/" && (
               <div className="active">
                 <NavDesign />
               </div>
             )}
-          </a>
-          <a href="/#services">
+          </Link>
+          <HashLink to="/#services">
             <span>SERVICES</span>
             {location.pathname?.includes("services") && (
               <div className="active">
                 <NavDesign />
               </div>
             )}
-          </a>
-          <a href="/team">
+          </HashLink>
+          <Link to="/team">
             <span>TEAM</span>
             {location.pathname === "/team" && (
               <div className="active">
                 <NavDesign />
               </div>
             )}
-          </a>
-          <a href="/contact">
+          </Link>
+          <Link to="/contact">
             <span>CONTACT US</span>
             {location.pathname === "/contact" && (
               <div className="active">
                 <NavDesign />
               </div>
             )}
-          </a>
-          <a className="hire" href="/hire">
+          </Link>
+          <Link className="hire" to="/hire">
             Hire us
-          </a>
+          </Link>
         </div>
       </div>
-      {/* {children} */}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.scss";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import HeaderWrap from "./components/Header-wrap";
 import Index from "./pages/Index";
 // import FooterFull from "./components/footer-full";
@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <HeaderWrap />
       <Routes>
         <Route path="/" element={<Index />} />
